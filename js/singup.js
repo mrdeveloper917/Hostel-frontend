@@ -1,5 +1,10 @@
+console.log("incoming..");
+
+
 document.getElementById('signupForm').addEventListener('submit', async function(e) {
     e.preventDefault();
+    console.log("singup..");
+    
 
     const formData = {
         username: this.username.value,
@@ -14,7 +19,9 @@ document.getElementById('signupForm').addEventListener('submit', async function(
             body: JSON.stringify(formData)
         });
 
-        const data = await res.text();
+        const data = await res.json();
+        console.log(data);
+        
 
         if (res.status === 201) {
             alert("Signup successful! Redirecting to login page...");
@@ -23,6 +30,8 @@ document.getElementById('signupForm').addEventListener('submit', async function(
             alert("Signup failed: " + data);
         }
     } catch (err) {
+        console.log(err);
+        
         alert("Error: " + err.message);
     }
 });
