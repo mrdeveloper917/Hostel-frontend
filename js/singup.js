@@ -11,8 +11,12 @@ document.getElementById('signupForm').addEventListener('submit', async function(
         email: this.email.value,
         password: this.password.value
     };
+    console.log("Oye hello yaha fromdata ke niche");
+    
 
     try {
+        console.log("try catch me aa gya hu");
+        
         const res = await fetch('https://hostel-backend.onrender.com/signup', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
