@@ -17,7 +17,7 @@ document.getElementById('signupForm').addEventListener('submit', async function(
     try {
         console.log("try catch me aa gya hu");
         
-        const res = await fetch('https://hostel-backend.onrender.com/signup', {
+        const res = await fetch('https://hostel-backend-fkio.onrender.com/signup', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify(formData)
