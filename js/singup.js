@@ -18,7 +18,8 @@ document.getElementById('signupForm').addEventListener('submit', async function(
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify(formData)
         });
-
+        console.log("yaha tak theek hai");
+        
         const data = await res.json();
         console.log(data);
         
