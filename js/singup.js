@@ -24,7 +24,7 @@ document.getElementById('signupForm').addEventListener('submit', async function(
         });
         console.log("yaha tak theek hai");
         
-        const data = await res.json();
+        const data = await res.text();
         console.log(data);
         
 
